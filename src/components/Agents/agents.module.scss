@@ -1,0 +1,17 @@
+@import '../../stylesheets/includes.scss';
+
+.agents {
+  padding: 200px 0;
+  background-color: $color-accent;
+  background-image: url('../../images/agents-background.jpg');
+  background-size: cover;
+  background-position: center center;
+}
+
+.row {
+  @include grid-row();
+}
+
+.col {
+  @include grid-col(6);
+}

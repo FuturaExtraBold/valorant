@@ -1,0 +1,13 @@
+@import '../../stylesheets/includes.scss';
+
+.hero {
+  background-color: $color-light;
+  height: 600px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}

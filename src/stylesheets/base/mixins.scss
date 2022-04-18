@@ -1,0 +1,96 @@
+@mixin clearfix {
+  display: table;
+  clear: both;
+  content: ' ';
+}
+
+@mixin fit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+@mixin webkit-overflow-scrolling {
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin appearance-none {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+@mixin container() {
+  position: relative;
+  flex-grow: 1;
+  max-width: $page-width + $container-gutter-mobile;
+  margin: 0 auto;
+  padding-right: $container-gutter-mobile;
+  padding-left: $container-gutter-mobile;
+  @media (min-width: $min-mobile) {
+    max-width: $page-width + $container-gutter-mobile * 2;
+  }
+  @media (min-width: $min-tablet) {
+    max-width: $page-width + $container-gutter-tablet * 2;
+    padding-right: $container-gutter-tablet;
+    padding-left: $container-gutter-tablet;
+  }
+  @media (min-width: $min-desktop) {
+    max-width: $page-width + $container-gutter-desktop * 2;
+    padding-right: $container-gutter-desktop;
+    padding-left: $container-gutter-desktop;
+  }
+}
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+@mixin responsive-font(
+  $min-size: $font-size-min,
+  $size: $font-size,
+  $limit: $page-limit
+) {
+  $scale-font-enable: global-variable-exists(scale);
+  $unitless-min: strip-unit($min-size);
+  $unitless-size: strip-unit($size);
+  $baseline: strip-unit($min-mobile);
+  $font-multiplier: (
+    ($unitless-size - $unitless-min) / (strip-unit($limit) - $baseline)
+  );
+  $font-baseline: ($unitless-min - $font-multiplier * $baseline);
+  font-size: #{$unitless-min}px;
+  @if $unitless-min >= $unitless-size {
+    @warn "Responsive font: min-size equal or greater than size";
+  }
+  @if $scale-font-enable == true {
+    font-size: calc(#{$unitless-min}px * #{var(--scale-font)});
+  }
+  @media (min-width: $min-mobile) {
+    font-size: #{$unitless-min}px;
+    @if $scale-font-enable == true {
+      font-size: calc(
+        (#{$font-multiplier} * #{100vw} + (#{$font-baseline}px)) *
+          #{var(--scale-font)}
+      );
+    } @else {
+      font-size: calc((#{$font-multiplier} * #{100vw} + (#{$font-baseline}px)));
+    }
+  }
+  @media (min-width: $limit) {
+    font-size: #{$unitless-size}px;
+    @if $scale-font-enable == true {
+      font-size: calc(#{$unitless-size}px * #{var(--scale-font)});
+    }
+  }
+}
+
+// Alias for responsive-font mixin
+@mixin rf($args...) {
+  @include responsive-font($args...);
+}
