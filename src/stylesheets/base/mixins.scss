@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @mixin clearfix {
   display: table;
   clear: both;
@@ -46,7 +48,7 @@
 
 @function strip-unit($number) {
   @if type-of($number) == 'number' and not unitless($number) {
-    @return $number / ($number * 0 + 1);
+    @return math.div($number, ($number * 0 + 1));
   }
   @return $number;
 }
@@ -60,8 +62,9 @@
   $unitless-min: strip-unit($min-size);
   $unitless-size: strip-unit($size);
   $baseline: strip-unit($min-mobile);
-  $font-multiplier: (
-    ($unitless-size - $unitless-min) / (strip-unit($limit) - $baseline)
+  $font-multiplier: math.div(
+    $unitless-size - $unitless-min,
+    strip-unit($limit) - $baseline
   );
   $font-baseline: ($unitless-min - $font-multiplier * $baseline);
   font-size: #{$unitless-min}px;
