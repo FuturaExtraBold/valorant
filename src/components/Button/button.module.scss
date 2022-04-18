@@ -1,0 +1,105 @@
+@import '../../stylesheets/includes.scss';
+$btn-transition: all 0.2s ease-out;
+
+@mixin btn-outline() {
+  @include fit();
+  width: 100%;
+  height: 40%;
+  transition: $btn-transition;
+  border: 1px solid $color-light;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 8px;
+  cursor: pointer;
+  min-width: 288px;
+}
+
+.btn-outline {
+  @include btn-outline();
+}
+
+.btn-top {
+  bottom: initial;
+  border-bottom: 0;
+}
+
+.btn-bottom {
+  top: initial;
+  border-top: 0;
+}
+
+.btn-content {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+  background-color: $color-accent;
+}
+
+.btn-overlay {
+  @include fit();
+  width: 120%;
+  transition: $btn-transition;
+  transform: skewX(-20deg) translateX(-104%);
+  background-color: $color-dark;
+}
+
+.btn-text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  position: relative;
+  transition: $btn-transition;
+  text-transform: uppercase;
+}
+
+.btn-accent {
+  position: absolute;
+  transition: $btn-transition;
+  background-color: $color-dark;
+}
+
+.btn-accent-1 {
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 3px;
+}
+
+.btn-accent-2 {
+  right: 0;
+  bottom: 0;
+  width: 6px;
+  height: 6px;
+}
+
+.btn:last-child {
+  margin-bottom: 0;
+}
+
+.btn:hover {
+  .btn-accent-2 {
+    background-color: $color-light;
+  }
+  .btn-overlay {
+    transform: skew(-20deg) translateX(-8%);
+  }
+  .btn-text {
+    color: $text-light;
+  }
+}
+
+.btn-secondary {
+  .btn-content {
+    background-color: $color-light;
+  }
+  .btn-outline {
+    border-color: $color-dark;
+  }
+}

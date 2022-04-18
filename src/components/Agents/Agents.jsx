@@ -1,19 +1,31 @@
 import React from 'react';
 
+import AgentsAnimated from './AgentsAnimated';
+import Button from '../Button/Button';
 import GiantText from '../GiantText/GiantText';
 
-import * as style from './agents.module.scss';
+import * as s from './agents.module.scss';
 
 export default function Agents() {
   return (
-    <section className={style.agents}>
+    <section className={s.agents}>
       <div className="container">
-        <div className={style.row}>
-          <div className={style.col}>
-            <h1>Agents</h1>
+        <div className={s.row}>
+          <div className={s.col}>
+            <AgentsAnimated />
           </div>
-          <div className={style.col}>
+          <div className={s.col}>
             <GiantText color="light" text={['Your', <br />, 'Agents']} />
+            <p className={`body--large ${s.title}`}>
+              CREATIVITY IS YOUR GREATEST WEAPON.
+            </p>
+            <p className={s.body}>
+              More than guns and bullets, you’ll choose an Agent armed with
+              adaptive, swift, and lethal abilities that create opportunities to
+              let your gunplay shine. No two Agents play alike, just as no two
+              highlight reels will look the same.
+            </p>
+            <Button text="View All Agents" type="secondary" />
           </div>
         </div>
       </div>

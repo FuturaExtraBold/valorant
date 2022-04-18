@@ -1,11 +1,13 @@
 @import '../../stylesheets/includes.scss';
 
 .agents {
-  padding: 200px 0;
+  padding: spacing(xxxl) 0;
   background-color: $color-accent;
   background-image: url('../../images/agents-background.jpg');
   background-size: cover;
-  background-position: center center;
+  background-position: top center;
+  overflow: visible;
+  z-index: 1;
 }
 
 .row {
@@ -14,4 +16,15 @@
 
 .col {
   @include grid-col(6);
+}
+
+.title {
+  margin: spacing(lg) 0 spacing(md);
+  color: $text-light;
+}
+
+.body {
+  margin-bottom: spacing(lg);
+  color: $text-light;
+  max-width: 420px;
 }
