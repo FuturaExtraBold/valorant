@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import * as s from './news-item.module.scss';
+import * as s from 'stylesIndex/news-item.module.scss';
 
 export default function NewsItem({ category, date, image, title }) {
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 
-import * as s from './button.module.scss';
+import * as s from 'stylesShared/button.module.scss';
 
 export default function Button({ text, type }) {
   const classNames = classnames(s.btn, {

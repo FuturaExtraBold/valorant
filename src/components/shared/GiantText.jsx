@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import classnames from 'classnames';
-import * as s from './giant-text.module.scss';
+
+import * as s from 'stylesShared/giant-text.module.scss';
 
 const GiantText = ({ color, size, text }) => {
   const el = useRef(null);

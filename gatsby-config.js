@@ -6,7 +6,19 @@ module.exports = {
   plugins: [
     'gatsby-plugin-sass',
     'gatsby-plugin-image',
-    'gatsby-plugin-resolve-src',
     'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-module-resolver',
+      options: {
+        root: './src',
+        aliases: {
+          components: './components',
+          images: './images',
+          stylesheets: './stylesheets',
+          stylesIndex: './stylesheets/components/index',
+          stylesShared: './stylesheets/components/shared',
+        },
+      },
+    },
   ],
 };

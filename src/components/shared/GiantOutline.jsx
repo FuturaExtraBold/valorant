@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import * as s from './giant-outline.module.scss';
+
+import * as s from 'stylesShared/giant-outline.module.scss';
 
 export default function GiantOutline() {
   const el = useRef(null);

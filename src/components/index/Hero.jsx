@@ -1,9 +1,9 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import AccentLine from 'components/shared/AccentLine/AccentLine';
+import AccentLine from 'components/shared/AccentLine';
 
-import * as s from './hero.module.scss';
+import * as s from 'stylesIndex/hero.module.scss';
 
 export default function Hero() {
   return (
@@ -13,7 +13,7 @@ export default function Hero() {
         <StaticImage
           alt="Valorant logo"
           placeholder="tracedSVG"
-          src="../../../../images/logo.svg"
+          src="../../images/logo.svg"
         />
       </div>
     </section>

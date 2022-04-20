@@ -1,12 +1,12 @@
 import React from 'react';
 
-import AgentsAnimated from './AgentsAnimated';
+import AgentsAnimated from 'components/index/AgentsAnimated';
 
-import AccentLine from 'components/shared/AccentLine/AccentLine';
-import Button from 'components/shared/Button/Button';
-import GiantText from 'components/shared/GiantText/GiantText';
+import AccentLine from 'components/shared/AccentLine';
+import Button from 'components/shared/Button';
+import GiantText from 'components/shared/GiantText';
 
-import * as s from './agents.module.scss';
+import * as s from 'stylesIndex/agents.module.scss';
 
 export default function Agents() {
   return (

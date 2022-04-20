@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Agents from 'components/pages/index/Agents/Agents';
-import Episode from 'components/pages/index/Episode/Episode';
-import Hero from 'components/pages/index/Hero/Hero';
-import News from 'components/pages/index/News/News';
+import Agents from 'components/index/Agents';
+import Episode from 'components/index/Episode';
+import Hero from 'components/index/Hero';
+import News from 'components/index/News';
 
-import Header from 'components/shared/Header/Header';
+import Header from 'components/shared/Header';
 
-import '../stylesheets/all.scss';
+import 'stylesheets/all.scss';
 
 const IndexPage = () => {
   return (

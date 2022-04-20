@@ -1,13 +1,13 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import NewsItem from 'components/pages/index/News/NewsItem';
+import NewsItem from 'components/index/NewsItem';
 
-import AccentLine from 'components/shared/AccentLine/AccentLine';
-import GiantOutline from 'components/shared/GiantOutline/GiantOutline';
-import GiantText from 'components/shared/GiantText/GiantText';
+import AccentLine from 'components/shared/AccentLine';
+import GiantOutline from 'components/shared/GiantOutline';
+import GiantText from 'components/shared/GiantText';
 
-import * as s from './news.module.scss';
+import * as s from 'stylesIndex/news.module.scss';
 
 export default function News() {
   return (
@@ -24,10 +24,7 @@ export default function News() {
               category="Game Updates"
               date="4/20/22"
               image={
-                <StaticImage
-                  alt="Jett Changes"
-                  src="../../../../images/news/1.jpg"
-                />
+                <StaticImage alt="Jett Changes" src="../../images/news/1.jpg" />
               }
               title="Valorant Jett Changes for Patch Notes 4.08"
             />
@@ -39,7 +36,7 @@ export default function News() {
               image={
                 <StaticImage
                   alt="New Agent: Fade"
-                  src="../../../../images/news/2.jpg"
+                  src="../../images/news/2.jpg"
                 />
               }
               title="New agent: Fade reveal at Masters finals"
@@ -52,7 +49,7 @@ export default function News() {
               image={
                 <StaticImage
                   alt="Gameplay consistency update"
-                  src="../../../../images/news/3.jpg"
+                  src="../../images/news/3.jpg"
                 />
               }
               title="Valorant gameplay consistency update"

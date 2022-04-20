@@ -18,7 +18,7 @@
     "classnames": "^2.3.1",
     "gatsby": "^4.12.1",
     "gatsby-plugin-image": "^2.12.1",
-    "gatsby-plugin-resolve-src": "^2.1.0",
+    "gatsby-plugin-module-resolver": "^1.0.3",
     "gatsby-plugin-sass": "^5.12.1",
     "gatsby-plugin-sharp": "^4.12.1",
     "gatsby-source-filesystem": "^4.12.1",

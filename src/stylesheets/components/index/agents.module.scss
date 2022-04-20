@@ -1,9 +1,9 @@
-@import '../../../../stylesheets/includes.scss';
+@import 'stylesheets/includes.scss';
 
 .section {
   padding: spacing(xxxl) 0;
   background-color: $color-accent;
-  background-image: url('../../../../images/agents-background.jpg');
+  background-image: url('images/agents-background.jpg');
   background-size: cover;
   background-position: top center;
   overflow: visible;

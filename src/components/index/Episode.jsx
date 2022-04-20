@@ -1,10 +1,11 @@
 import React from 'react';
-import * as s from './episode.module.scss';
 
-import AccentLine from 'components/shared/AccentLine/AccentLine';
-import Button from 'components/shared/Button/Button';
-import GiantText from 'components/shared/GiantText/GiantText';
-import ScrambleText from 'components/shared/ScrambleText/ScrambleText';
+import AccentLine from 'components/shared/AccentLine';
+import Button from 'components/shared/Button';
+import GiantText from 'components/shared/GiantText';
+import ScrambleText from 'components/shared/ScrambleText';
+
+import * as s from 'stylesIndex/episode.module.scss';
 
 export default function Episode() {
   return (

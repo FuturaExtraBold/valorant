@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 
-import * as s from './agents-animated.module.scss';
+import * as s from 'stylesIndex/agents-animated.module.scss';
 
 export default function AgentsAnimated() {
   const el = useRef(null);
@@ -20,7 +20,7 @@ export default function AgentsAnimated() {
       <StaticImage
         alt="Animated image of Raze and Reyna"
         placeholder="tracedSVG"
-        src="../../../../images/raze-reyna.png"
+        src="../../images/raze-reyna.png"
       />
     </div>
   );
