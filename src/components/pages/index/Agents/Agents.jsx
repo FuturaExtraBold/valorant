@@ -1,22 +1,37 @@
 import React from 'react';
 
 import AgentsAnimated from './AgentsAnimated';
-import Button from '../Button/Button';
-import GiantText from '../GiantText/GiantText';
+
+import AccentLine from 'components/shared/AccentLine/AccentLine';
+import Button from 'components/shared/Button/Button';
+import GiantText from 'components/shared/GiantText/GiantText';
 
 import * as s from './agents.module.scss';
 
 export default function Agents() {
   return (
-    <section className={s.agents}>
+    <section className={`section ${s.section}`}>
+      <AccentLine />
+      <div className={`${s.accent} ${s.accentTopLeft}`}></div>
+      <div className={`${s.accent} ${s.accentTopRight}`}></div>
       <div className="container">
         <div className={s.row}>
           <div className={s.col}>
             <AgentsAnimated />
           </div>
           <div className={s.col}>
-            <GiantText color="light" text={['Your', <br />, 'Agents']} />
-            <p className={`body--large ${s.title}`}>
+            <div className={s.line}></div>
+            <GiantText
+              color="light"
+              text={
+                <>
+                  Your
+                  <br />
+                  Agents
+                </>
+              }
+            />
+            <p className={`t-body-large ${s.title}`}>
               CREATIVITY IS YOUR GREATEST WEAPON.
             </p>
             <p className={s.body}>

@@ -1,0 +1,28 @@
+@import '../../../../stylesheets/includes.scss';
+
+.item {
+  width: 100%;
+}
+
+.title {
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.image {
+  margin-bottom: spacing(sm);
+}
+
+.info {
+  display: flex;
+  margin-bottom: spacing(xs);
+}
+
+.date {
+  margin-right: spacing(sm);
+}
+
+.category {
+  color: $color-accent;
+  text-transform: uppercase;
+}

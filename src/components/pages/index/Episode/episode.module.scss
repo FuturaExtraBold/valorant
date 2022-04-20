@@ -1,0 +1,28 @@
+@import '../../../../stylesheets/includes.scss';
+
+.section {
+  background-color: $color-dark;
+  padding: spacing(xxxxl) 0 spacing(xxxl);
+  background-image: url('../../../../images/disruption.jpg');
+  background-size: cover;
+  background-position: center 20%;
+  z-index: 1;
+}
+
+.row {
+  @include grid-row();
+}
+
+.col {
+  @include grid-col(6);
+}
+
+.accent-text {
+  color: $color-light;
+  margin-bottom: spacing(xl);
+  letter-spacing: 7px;
+}
+
+.giant-text {
+  margin-bottom: spacing(xl);
+}

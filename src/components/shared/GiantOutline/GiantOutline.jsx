@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import * as style from './giant-outline.module.scss';
+import * as s from './giant-outline.module.scss';
 
 export default function GiantOutline() {
   const el = useRef(null);
@@ -11,7 +11,7 @@ export default function GiantOutline() {
   });
 
   return (
-    <div className={style.giantOutline} ref={el}>
+    <div className={s.giantOutline} ref={el}>
       We are
       <br />
       &nbsp;&nbsp;&nbsp;&nbsp;Valorant

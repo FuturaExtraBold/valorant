@@ -17,9 +17,16 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-.body--large {
+.t-body-small {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.t-body-large {
   @include responsive-font($font-size-min, $font-size-large);
   letter-spacing: -0.2;
+  font-weight: 600;
+  line-height: 1.2;
 }
 
 h1,

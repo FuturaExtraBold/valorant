@@ -1,0 +1,57 @@
+@import '../../../../stylesheets/includes.scss';
+
+.section {
+  padding: spacing(xxxl) 0;
+  background-color: $color-accent;
+  background-image: url('../../../../images/agents-background.jpg');
+  background-size: cover;
+  background-position: top center;
+  overflow: visible;
+  z-index: 1;
+}
+
+.accent {
+  background-color: $color-accent;
+  position: absolute;
+}
+
+.accent-top-left {
+  top: -53px;
+  height: 200px;
+  width: 600px;
+  left: 0;
+  transform: skewY(10deg);
+}
+
+.accent-top-right {
+  transform: skewY(-1deg);
+  width: 900px;
+  top: -15px;
+  height: 60px;
+  right: 0;
+}
+
+.row {
+  @include grid-row();
+}
+
+.col {
+  @include grid-col(6);
+}
+
+.line {
+  border-top: 0.25px solid rgba(#fff, 0.2);
+  max-width: 400px;
+  margin-bottom: spacing(xxl);
+}
+
+.title {
+  margin: spacing(lg) 0 spacing(md);
+  color: $text-light;
+}
+
+.body {
+  margin-bottom: spacing(lg);
+  color: $text-light;
+  max-width: 420px;
+}

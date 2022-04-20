@@ -1,4 +1,4 @@
-@import '../../stylesheets/includes.scss';
+@import '../../../stylesheets/includes.scss';
 
 .giant-text {
   position: relative;
@@ -23,6 +23,10 @@
 
 .text-light {
   color: $color-light;
+}
+
+.text-accent {
+  color: $color-accent;
 }
 
 .text-animate-in {

@@ -1,0 +1,16 @@
+@import '../../../stylesheets/includes.scss';
+
+.line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-600px);
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: $color-light;
+  z-index: 1;
+}
+
+.line-dark {
+  background-color: $color-dark;
+}

@@ -1,0 +1,22 @@
+@import '../../../../stylesheets/includes.scss';
+
+.section {
+  padding: spacing(xxxl) 0;
+  background-color: $color-light;
+  z-index: 1;
+}
+
+.row {
+  @include grid-row();
+}
+
+.col {
+  @include grid-col(4);
+  z-index: 1;
+}
+
+.giant-text {
+  position: absolute;
+  top: -26%;
+  z-index: 10;
+}

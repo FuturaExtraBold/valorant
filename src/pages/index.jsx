@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Agents from '../components/Agents/Agents';
-import GiantOutline from '../components/GiantOutline/GiantOutline';
-import GiantText from '../components/GiantText/GiantText';
-import Header from '../components/Header/Header';
-import Hero from '../components/Hero/Hero';
-import ScrambleText from '../components/ScrambleText/ScrambleText';
+import Agents from 'components/pages/index/Agents/Agents';
+import Episode from 'components/pages/index/Episode/Episode';
+import Hero from 'components/pages/index/Hero/Hero';
+import News from 'components/pages/index/News/News';
+
+import Header from 'components/shared/Header/Header';
 
 import '../stylesheets/all.scss';
 
@@ -15,25 +15,9 @@ const IndexPage = () => {
       <Header />
       <main className="content">
         <Hero />
+        <News />
+        <Episode />
         <Agents />
-        <div className="page">
-          <div className="container">
-            <GiantText text={['Where precise', <br />, 'gunplay matters...']} />
-          </div>
-          <GiantOutline />
-        </div>
-        <div className="page">
-          <GiantText text={['Where precise', <br />, 'gunplay matters...']} />
-          <ScrambleText />
-        </div>
-        <div className="page">
-          <GiantText
-            text={['...But creativity is', <br />, 'your greatest weapon']}
-          />
-        </div>
-        <div className="page">
-          <GiantText text={['Stay connected', <br />, 'to us']} />
-        </div>
       </main>
     </>
   );
