@@ -4,9 +4,10 @@ import classnames from 'classnames';
 
 import * as s from 'stylesShared/button.module.scss';
 
-export default function Button({ text, type }) {
+export default function Button({ outline, text, type }) {
   const classNames = classnames(s.btn, {
     [s.btnSecondary]: type === 'secondary',
+    [s.btnOutlineDark]: outline === 'dark',
   });
   return (
     <div className={classNames}>
@@ -23,10 +24,12 @@ export default function Button({ text, type }) {
 }
 
 Button.defaultProps = {
+  outline: '',
   type: '',
 };
 
 Button.propTypes = {
+  outline: PropTypes.string,
   text: PropTypes.string.isRequired,
   type: PropTypes.string,
 };

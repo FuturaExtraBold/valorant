@@ -1,0 +1,48 @@
+@import 'stylesheets/includes.scss';
+
+.section {
+  background-color: $color-light;
+  padding: spacing(xxxl) 0;
+}
+
+.row {
+  @include grid-row();
+  margin-left: spacing(xxl);
+}
+
+.col-text {
+  @include grid-col(4);
+}
+
+.col-video {
+  @include grid-col(8);
+}
+
+.text {
+  position: relative;
+  z-index: 1;
+}
+
+.line {
+  border-top: 0.25px solid rgba(#000, 0.2);
+  margin-left: spacing(xxl);
+  margin-bottom: spacing(xxl);
+}
+
+.giant-text {
+  margin-left: spacing(xxl);
+  margin-bottom: spacing(xxl);
+}
+
+.title {
+  margin-bottom: spacing(xl);
+}
+
+.body {
+  margin-bottom: spacing(xl);
+  max-width: 420px;
+}
+
+.video {
+  width: 100%;
+}

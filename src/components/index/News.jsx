@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import NewsItem from 'components/index/NewsItem';
@@ -7,12 +7,32 @@ import AccentLine from 'components/shared/AccentLine';
 import GiantOutline from 'components/shared/GiantOutline';
 import GiantText from 'components/shared/GiantText';
 
+import parallax from 'javascripts/parallax';
+
 import * as s from 'stylesIndex/news.module.scss';
 
 export default function News() {
+  const refSection = useRef(null);
+  const refElement = useRef(null);
+
+  function parallaxProxy() {
+    parallax(refSection, refElement, 0.075);
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', parallaxProxy);
+    parallaxProxy();
+  });
+
   return (
-    <section className={`section ${s.section}`}>
-      <GiantOutline />
+    <section className={`section ${s.section}`} ref={refSection}>
+      <div className={s.giantOutline} ref={refElement}>
+        <GiantOutline>
+          We are
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;Valorant
+        </GiantOutline>
+      </div>
       <AccentLine color="dark" />
       <div className="container">
         <div className={s.giantText}>

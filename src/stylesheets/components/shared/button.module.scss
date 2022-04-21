@@ -23,6 +23,12 @@ $btn-transition: all 0.2s ease-out;
   @include btn-outline();
 }
 
+.btn-outline-dark {
+  .btn-outline {
+    border-color: $color-dark;
+  }
+}
+
 .btn-top {
   bottom: initial;
   border-bottom: 0;
@@ -47,17 +53,19 @@ $btn-transition: all 0.2s ease-out;
 .btn-overlay {
   @include fit();
   width: 120%;
+  height: 120%;
   transition: $btn-transition;
   transform: skewX(-20deg) translateX(-104%);
   background-color: $color-dark;
 }
 
 .btn-text {
-  font-size: 1.2rem;
+  font-size: 13px;
   font-weight: 700;
   position: relative;
   transition: $btn-transition;
   text-transform: uppercase;
+  color: $color-light;
 }
 
 .btn-accent {
@@ -97,6 +105,9 @@ $btn-transition: all 0.2s ease-out;
 }
 
 .btn-secondary {
+  .btn-text {
+    color: $color-dark;
+  }
   .btn-content {
     background-color: $color-light;
   }

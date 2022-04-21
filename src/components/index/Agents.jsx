@@ -1,23 +1,45 @@
-import React from 'react';
-
-import AgentsAnimated from 'components/index/AgentsAnimated';
+import React, { useEffect, useRef } from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import AccentLine from 'components/shared/AccentLine';
 import Button from 'components/shared/Button';
 import GiantText from 'components/shared/GiantText';
 
+import parallax from 'javascripts/parallax';
+
 import * as s from 'stylesIndex/agents.module.scss';
 
 export default function Agents() {
+  const refSection = useRef(null);
+  const refTexture = useRef(null);
+  const refAgents = useRef(null);
+
+  function parallaxProxy() {
+    parallax(refSection, refTexture, 0.1);
+    parallax(refSection, refAgents, -0.1);
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', parallaxProxy);
+    parallaxProxy();
+  });
+
   return (
-    <section className={`section ${s.section}`}>
+    <section className={`section ${s.section}`} ref={refSection}>
       <AccentLine />
+      <div className={s.texture} ref={refTexture}></div>
       <div className={`${s.accent} ${s.accentTopLeft}`}></div>
       <div className={`${s.accent} ${s.accentTopRight}`}></div>
       <div className="container">
         <div className={s.row}>
           <div className={s.col}>
-            <AgentsAnimated />
+            <div className={s.agents} ref={refAgents}>
+              <StaticImage
+                alt="Animated image of Raze and Reyna"
+                placeholder="tracedSVG"
+                src="../../images/raze-reyna.png"
+              />
+            </div>
           </div>
           <div className={s.col}>
             <div className={s.line}></div>

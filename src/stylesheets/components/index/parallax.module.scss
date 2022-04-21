@@ -1,0 +1,24 @@
+@import 'stylesheets/includes.scss';
+
+.section {
+  height: 800px;
+  background-color: $color-light;
+}
+
+.center {
+  width: 100%;
+  height: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  background-color: red;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}

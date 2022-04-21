@@ -7,10 +7,10 @@
   top: 0;
   width: 1px;
   height: 100%;
-  background-color: $color-light;
+  background-color: rgba($color-light, 0.3);
   z-index: 1;
 }
 
 .line-dark {
-  background-color: $color-dark;
+  background-color: rgba($color-dark, 0.3);
 }

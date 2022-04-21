@@ -2,12 +2,34 @@
 
 .section {
   background-color: $color-light;
-  height: 600px;
+  height: 40vw;
 }
 
 .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
+}
+
+.video-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.video {
+  width: 100%;
+}
+
+.body {
+  color: $color-light;
+  margin: 0;
+}
+
+.logo {
+  margin: spacing(lg) 0 spacing(xl);
 }

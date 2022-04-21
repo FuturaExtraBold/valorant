@@ -14,9 +14,11 @@ module.exports = {
         aliases: {
           components: './components',
           images: './images',
+          javascripts: './javascripts',
           stylesheets: './stylesheets',
           stylesIndex: './stylesheets/components/index',
           stylesShared: './stylesheets/components/shared',
+          videos: './videos',
         },
       },
     },

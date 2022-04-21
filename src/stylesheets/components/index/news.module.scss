@@ -1,9 +1,10 @@
 @import 'stylesheets/includes.scss';
 
 .section {
-  padding: spacing(xxxl) 0;
+  padding: spacing(xxxxl) 0 spacing(xxxl);
   background-color: $color-light;
   z-index: 1;
+  overflow: hidden;
 }
 
 .row {
@@ -19,4 +20,10 @@
   position: absolute;
   top: -26%;
   z-index: 10;
+}
+
+.giant-outline {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-800px);
 }

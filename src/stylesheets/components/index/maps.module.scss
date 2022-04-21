@@ -1,0 +1,67 @@
+@import 'stylesheets/includes';
+
+$bleed: 100px;
+
+.section {
+  background-color: $color-light;
+  padding: spacing(xxxl) 0;
+}
+
+.birds {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(60%);
+  width: 400px;
+  height: 264px;
+  background-image: url('images/birds.png');
+}
+
+.image {
+  position: absolute;
+  top: -$bleed;
+  left: 0;
+  width: 100%;
+  height: calc(100% + $bleed);
+  background-image: url('images/maps.png');
+  background-position: right top;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.row {
+  @include grid-row();
+}
+
+.col {
+  @include grid-col(6);
+}
+
+.text {
+  position: relative;
+  z-index: 1;
+}
+
+.line {
+  border-top: 0.25px solid rgba(#000, 0.2);
+  margin-bottom: spacing(xxl);
+}
+
+.giant-outline {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-800px);
+}
+
+.giant-text {
+  margin-bottom: spacing(xl);
+}
+
+.title {
+  margin-bottom: spacing(xl);
+}
+
+.body {
+  margin-bottom: spacing(xl);
+  max-width: 420px;
+}
