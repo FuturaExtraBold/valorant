@@ -20,7 +20,8 @@ const GiantText = ({ color, size, text }) => {
   const classNames = classnames(s.text, {
     [s.textLight]: color === 'light',
     [s.textAccent]: color === 'accent',
-    [s.textSmall]: size === 'small',
+    [s.textSm]: size === 'sm',
+    [s.textXs]: size === 'xs',
     [s.textAnimateIn]: animateIn,
   });
 

@@ -24,10 +24,10 @@ img {
 }
 
 .container {
-  @include container();
+  @include container;
 }
 
 .section {
-  width: 100%;
   position: relative;
+  width: 100%;
 }

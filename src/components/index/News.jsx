@@ -36,7 +36,7 @@ export default function News() {
       <AccentLine color="dark" />
       <div className="container">
         <div className={s.giantText}>
-          <GiantText color="accent" size="small" text="Latest News" />
+          <GiantText color="accent" size="sm" text="Latest News" />
         </div>
         <div className={s.row}>
           <div className={s.col}>

@@ -1,25 +1,26 @@
-@import 'stylesheets/includes.scss';
+@import 'stylesheets/includes';
 
 .section {
-  padding: spacing(xxxxl) 0 spacing(xxxl);
-  background-color: $color-light;
   z-index: 1;
   overflow: hidden;
+  padding: spacing(xxxxl) 0 spacing(xxxl);
+  background-color: $color-light;
 }
 
 .row {
-  @include grid-row();
+  @include grid-row;
 }
 
 .col {
   @include grid-col(4);
+
   z-index: 1;
 }
 
 .giant-text {
   position: absolute;
-  top: -26%;
   z-index: 10;
+  top: -26%;
 }
 
 .giant-outline {

@@ -1,0 +1,19 @@
+@import 'stylesheets/includes';
+
+.gun {
+  display: flex;
+  width: 500px;
+  height: 400px;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: spacing(xl);
+  background-color: red;
+}
+
+.image {
+  filter: drop-shadow(1.5rem 2.2rem 0 rgba(#0f1923, 17%));
+}
+
+.text {
+  margin-bottom: 0;
+}

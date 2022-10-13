@@ -1,13 +1,13 @@
-@import 'stylesheets/includes.scss';
+@import 'stylesheets/includes';
 
 .section {
+  z-index: 1;
+  overflow: visible;
   padding: spacing(xxxl) 0;
   background-color: $color-accent;
   background-image: url('images/agents-background.jpg');
-  background-size: cover;
   background-position: top center;
-  overflow: visible;
-  z-index: 1;
+  background-size: cover;
 }
 
 .texture {
@@ -17,41 +17,41 @@
   width: 100%;
   height: 100%;
   background-image: url('images/agents-texture.png');
-  background-repeat: no-repeat;
   background-position: 42% 42%;
+  background-repeat: no-repeat;
 }
 
 .agents {
   position: absolute;
-  left: 0;
-  top: 0;
-  transform: translateX(-20%) translateY(-15%);
   z-index: 1;
+  top: 0;
+  left: 0;
+  transform: translateX(-20%) translateY(-15%);
 }
 
 .accent {
-  background-color: $color-accent;
   position: absolute;
+  background-color: $color-accent;
 }
 
 .accent-top-left {
   top: -53px;
-  height: 200px;
-  width: 600px;
   left: 0;
+  width: 600px;
+  height: 200px;
   transform: skewY(10deg);
 }
 
 .accent-top-right {
-  transform: skewY(-1deg);
-  width: 900px;
   top: -15px;
-  height: 60px;
   right: 0;
+  width: 900px;
+  height: 60px;
+  transform: skewY(-1deg);
 }
 
 .row {
-  @include grid-row();
+  @include grid-row;
 }
 
 .col {
@@ -59,8 +59,8 @@
 }
 
 .line {
-  border-top: 0.25px solid rgba(#fff, 0.2);
   max-width: 400px;
+  border-top: 0.25px solid rgba(#fff, 0.2);
   margin-bottom: spacing(xxl);
 }
 
@@ -70,7 +70,7 @@
 }
 
 .body {
+  max-width: 420px;
   margin-bottom: spacing(lg);
   color: $text-light;
-  max-width: 420px;
 }

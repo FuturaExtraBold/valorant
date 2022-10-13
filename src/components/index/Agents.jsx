@@ -54,7 +54,7 @@ export default function Agents() {
               }
             />
             <p className={`t-body-large ${s.title}`}>
-              CREATIVITY IS YOUR GREATEST WEAPON.
+              CREATIVITY IS YOUR GREATEST WEAPON
             </p>
             <p className={s.body}>
               More than guns and bullets, you’ll choose an Agent armed with

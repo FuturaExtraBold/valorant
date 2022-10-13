@@ -1,24 +1,29 @@
-@import 'stylesheets/includes.scss';
+@import 'stylesheets/includes';
 
 .giant-text {
   position: relative;
-  overflow: hidden;
   z-index: 1;
+  overflow: hidden;
 }
 
 .text {
   @include responsive-font(60px, 140px);
+
+  margin: 0;
   color: $color-dark;
   font-family: $font-family-heading;
   line-height: 0.85;
-  margin: 0;
-  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-  transform: translateY(100%);
   text-transform: uppercase;
+  transform: translateY(100%);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.text-small {
+.text-sm {
   @include responsive-font(60px, 120px);
+}
+
+.text-xs {
+  @include responsive-font(40px, 60px);
 }
 
 .text-light {

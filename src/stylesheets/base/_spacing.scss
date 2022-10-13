@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $spacings: (
   xxs: 4px,
   xs: 8px,
@@ -11,6 +13,7 @@ $spacings: (
 );
 
 @function spacing($key: md) {
-  $value: map-get($spacings, $key);
+  $value: map.get($spacings, $key);
+
   @return $value;
 }

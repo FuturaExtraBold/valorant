@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "stylelint-config-idiomatic-order",
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier"
+  ],
+  "plugins": ["stylelint-order", "stylelint-scss"],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "function-no-unknown": null,
+    "selector-class-pattern": null,
+    "scss/operator-no-newline-after": null,
+    "order/order": ["custom-properties", "declarations"]
+  }
+}

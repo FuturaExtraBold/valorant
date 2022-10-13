@@ -1,16 +1,16 @@
-@import 'stylesheets/includes.scss';
+@import 'stylesheets/includes';
 
 .section {
-  background-color: $color-dark;
-  padding: spacing(xxxxl) 0 spacing(xxxl);
-  background-image: url('images/disruption.jpg');
-  background-size: cover;
-  background-position: center 20%;
   z-index: 1;
+  padding: spacing(xxxxl) 0 spacing(xxxl);
+  background-color: $color-dark;
+  background-image: url('images/disruption.jpg');
+  background-position: center 20%;
+  background-size: cover;
 }
 
 .row {
-  @include grid-row();
+  @include grid-row;
 }
 
 .col {
@@ -18,8 +18,8 @@
 }
 
 .accent-text {
-  color: $color-light;
   margin-bottom: spacing(xl);
+  color: $color-light;
   letter-spacing: 7px;
 }
 

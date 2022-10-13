@@ -1,12 +1,13 @@
-@import 'stylesheets/includes.scss';
+@import 'stylesheets/includes';
 
 .section {
-  background-color: $color-light;
   padding: spacing(xxxl) 0;
+  background-color: $color-light;
 }
 
 .row {
-  @include grid-row();
+  @include grid-row;
+
   margin-left: spacing(xxl);
 }
 
@@ -25,13 +26,13 @@
 
 .line {
   border-top: 0.25px solid rgba(#000, 0.2);
-  margin-left: spacing(xxl);
   margin-bottom: spacing(xxl);
+  margin-left: spacing(xxl);
 }
 
 .giant-text {
-  margin-left: spacing(xxl);
   margin-bottom: spacing(xxl);
+  margin-left: spacing(xxl);
 }
 
 .title {
@@ -39,8 +40,8 @@
 }
 
 .body {
-  margin-bottom: spacing(xl);
   max-width: 420px;
+  margin-bottom: spacing(xl);
 }
 
 .video {
